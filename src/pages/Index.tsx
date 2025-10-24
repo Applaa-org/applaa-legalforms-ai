@@ -10,7 +10,7 @@ import DocumentCard from '@/components/DocumentCard';
 import FormField from '@/components/FormField';
 import DocumentPreview from '@/components/DocumentPreview';
 import SuccessMessage from '@/components/SuccessMessage';
-import { documentTypes } from '@/data/documentTemplates';
+import { templates } from '@/data/documentTemplates';
 import { generateDocument, downloadDocument } from '@/lib/documentGenerator';
 import { MadeWithApplaa } from '@/components/made-with-applaa';
 
@@ -21,7 +21,7 @@ const Index = () => {
   const [successMessage, setSuccessMessage] = useState<string>('');
   const [isDownloading, setIsDownloading] = useState(false);
 
-  const currentDocument = documentTypes.find(doc => doc.id === selectedDocument);
+  const currentDocument = templates.find(doc => doc.id === selectedDocument);
 
   const generateSchema = () => {
     const schema: Record<string, any> = {};
@@ -109,7 +109,7 @@ const Index = () => {
 
         {!selectedDocument ? (
           <div id="documents" className="grid md:grid-cols-3 gap-6 mb-12">
-            {documentTypes.map((doc) => (
+            {templates.map((doc) => (
               <DocumentCard
                 key={doc.id}
                 id={doc.id}

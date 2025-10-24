@@ -108,7 +108,7 @@ const Index = () => {
         </div>
 
         {!selectedDocument ? (
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div id="documents" className="grid md:grid-cols-3 gap-6 mb-12">
             {documentTypes.map((doc) => (
               <DocumentCard
                 key={doc.id}
@@ -204,6 +204,16 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        <div id="about" className="mt-16 p-8 bg-white rounded-2xl shadow-lg">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">About LegalForms AI</h2>
+          <p className="text-gray-600 mb-4">
+            Our AI-powered document generator helps you create professional legal documents without needing any legal expertise. Simply fill in the forms, and we'll generate perfectly formatted documents ready for download.
+          </p>
+          <p className="text-gray-600">
+            Documents created: Rental Agreements, Power of Attorney, Complaint Letters, and more coming soon!
+          </p>
+        </div>
       </main>
 
       <MadeWithApplaa />
@@ -218,6 +228,3 @@ const Index = () => {
 };
 
 export default Index;
-</aplaa-write>
-
-<applaa-command type="restart"></applaa-command>

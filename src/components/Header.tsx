@@ -18,12 +18,12 @@ export default function Header() {
             <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Documents
-            </Link>
-            <Link to="/#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            </a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               About
-            </Link>
+            </a>
           </nav>
         </div>
       </div>
